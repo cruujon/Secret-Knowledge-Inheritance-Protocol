@@ -10,8 +10,6 @@ Short concept: A tool that allows people who wish to preserve cultural assets or
 
 ### Repository / MVP / DEMO
 
-- **Repository:** https://github.com/Heirloom-Inheritance-Protocol
-- **MVP page:** https://heritage-inheritance-protocol.vercel.app/inherit
 - **Deck / Presentation:** https://docs.google.com/presentation/d/1HbvQ5WrT1ixoNJFvNQ_snX9PHyXFh6y4JEpv3stpHbs/edit?usp=sharing
 - **Demo Part 1.** https://www.loom.com/share/f6728646c05945af9426c45abc1b3635
 - **Demo Part 2.** https://www.loom.com/share/d44c7aa0cda34dec8b7aee21f754bc49
@@ -366,83 +364,8 @@ https://docs.google.com/presentation/d/1HbvQ5WrT1ixoNJFvNQ_snX9PHyXFh6y4JEpv3stp
 
 ---
 
-# Objectives in Invisible Garden 2025
 
-By the end of ARG25, the following core objectives were achieved:
-
-- Record at least one _inheritance event_ (owner → successor) on-chain and show the transaction hash.
-- Successfully upload an encrypted file to IPFS and store only the CID on-chain.
-- Ensure that only the designated successor wallet can decrypt the encrypted file.
-- Provide a clear UI workflow:  
-  “inheritance created → inheritance claimable by successor → inheritance claimed → decrypted.”
-
----
-
-# Weekly Progress during Invisible Garden 2025
-
-## Week 1 (ends Oct 31)
-
-**Goals:**  
-Team formation and early ideation.
-
-**Progress Summary:**  
-Teamed up with @DaroMacs and @masaun.  
-Explored initial product directions and cultural preservation use cases.
-
----
-
-## Week 2 (ends Nov 7)
-
-**Goals:**  
-Finalize the core architecture, define encryption and storage flows, and choose the tech stack.
-
-**Progress Summary:**
-
-### Frontend MVP
-
-- Scaffolded a Next.js + Wagmi + viem application.
-- Integrated wallet connection and basic transaction handling.
-- Built initial UI for uploading PDFs and showing inheritance lineage.
-- Implemented placeholder IPFS integration to simulate CID workflows.
-
-### Documentation
-
-- Added system architecture diagrams to `/docs/ARCHITECTURE.md`.
-- Updated README with contract address placeholders, stack overview, and usage instructions.
-
-### Tech Stack Overview
-
-- **Blockchain:** Arbitrum Sepolia
-- **Smart Contracts:** Solidity
-- **Frontend:** Next.js 14, TypeScript, Wagmi, viem, shadcn/ui
-- **Storage:** IPFS (CID-based retrieval)
-- **Tooling:** pnpm, dotenv, eslint/prettier
-
-### System Architecture (MVP)
-
-Validated the integration model:
-
-- Client-side AES encryption
-- IPFS upload via API route or client
-- On-chain metadata
-- Successor-only decryption
-
----
-
-## Week 3 (ends Nov 14)
-
-**Goals:**  
-Complete the MVP development and deploy all components.
-
-**Progress Summary:**
-
-- Smart contract deployed to Arbitrum Sepolia.
-- IPFS integration with actual encrypted blobs is live.
-- Full end-to-end inheritance flow implemented:
-  encrypt → upload → register → claim → decrypt.
-- Users can now experience the full MVP on the live deployment.
-
-# Next Steps (After Invisible Garden)
+# Next Steps
 
 ## Short Term
 
@@ -463,42 +386,5 @@ Complete the MVP development and deploy all components.
   - Run funding rounds for cultural assets.
   - Collaborate with local governments and cultural institutions to test real-world deployments.
 
----
-
----
-
-# Final Wrap-Up
-
-### Deliverables
-
-- Fully functional MVP
-- On-chain contract
-- Live frontend with complete user flows
-- Encrypted inheritance mechanism
-- Lineage visibility and basic UI
-
-### Technical Outcomes
-
-- Verified viability of client-side AES-256-GCM encryption + PBKDF2 key derivation tied to successor wallet address.
-- Implemented a minimal yet secure pipeline combining IPFS, Ethereum smart contracts, and browser crypto.
-- Identified areas for improvement (key rotation, ECDH upgrade, multi-layered permissions).
-
-### Repository / MVP / DEMO
-
-- **Repository:** https://github.com/Heirloom-Inheritance-Protocol
-- **MVP page:** https://heirloom-inheritance-protocol.vercel.app/
-- **Deck / Presentation:** https://docs.google.com/presentation/d/1HbvQ5WrT1ixoNJFvNQ_snX9PHyXFh6y4JEpv3stpHbs/edit?usp=sharing
-
----
-
-# Learnings
-
-During ARG25, we deepened our understanding of:
-
-- Core Arbitrum Stylus concepts from the lecture series, including how Rust-based contracts interact with the Arbitrum toolchain.
-- Security best practices around client-side encryption, emphasizing key derivation, storage minimization, and safe handling of encrypted payloads.
-- Designing IPFS upload flows that keep the encrypted data decoupled from on-chain references while preserving traceability.
-- Structuring inheritance journeys in the UI so wallet interactions, encryption steps, and status updates remain transparent to non-technical users.
-- Coordinating smart contract events with frontend state to build reliable lineage timelines across deployments and testnets.
 
 ---
